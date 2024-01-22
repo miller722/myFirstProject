@@ -1,0 +1,25 @@
+.breadcrumb {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+    &__link {
+        text-decoration: none;
+        font-size: 17px;
+        font-family: "NunitoSans";
+        color: rgb(164, 164, 164) !important;
+    }
+    
+    &__active {
+        font-size: 17px;
+        font-family: "NunitoSans";
+        color: rgb(164, 164, 164) !important;
+        text-decoration: none;
+    }
+    
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: #a4a4a4 !important;
+    content: var(--bs-breadcrumb-divider, "/");
+}

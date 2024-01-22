@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Nunito+Sans:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  </head>
+  <body> 
+    <header class="header">
+      <nav class="navbar navbar-expand-lg header-bg">
+        <div class="container"> <a class="navbar-brand" href="#"><img src="./img/header/LOGO.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item"> <a class="nav-link home" aria-current="page" href="../../index.html">HOME</a></li>
+              <li class="nav-item dropdown"><a class="nav-link properties" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">PROPERTIES</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li> 
+                    <div class="line_1"></div>
+                  </li>
+                  <li><a class="dropdown-item" href="../../property-card.html">Properties Map</a></li>
+                  <li><a class="dropdown-item" href="../../home-3.html">Properties Map</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="../../home-4.html">Single Property</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"> <a class="nav-link agencies" href="../../agencies.html">AGENCIES</a></li>
+              <li class="nav-item"> <a class="nav-link about" href="../../about-us.html">ABOUT</a></li>
+              <li class="nav-item"> <a class="nav-link news" href="../../news.html">NEWS</a></li>
+              <li class="nav-item"> <a class="nav-link contact" href="../../contact.html">CONTACT US			</a></li>
+            </ul>
+            <div class="auth"> 
+              <div class="auth__icon"> <img src="./img/header/icon-login.png" alt="icon"></div>
+              <div class="auth__login"> <a href="http://"> LOGIN </a></div>
+              <div class="auth__register"> <a href="http://"> REGISTER
+                  <title>Home</title></a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main> 
+      <section class="section-home">
+        <div class="container-md"> 
+          <div class="row"> 
+            <div class="col-md-6">
+              <div class="property"> 
+                <div class="property-map"> 
+                  <iframe class="property-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194144778!2d-74.03927083569786!3d40.75904032948303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2z0JzQsNC90YXRjdGC0YLQtdC9LCDQndGM0Y4t0JnQvtGA0LosINCh0KjQkA!5e0!3m2!1sru!2sua!4v1638813276656!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="property-form"> 
+                <div class="property-form__select"> 
+                  <label class="property-form__select--label" for="">City</label>
+                  <select class="form-select property-form__select--color">
+                    <option class="property-form__select--option" value="">New York</option>
+                  </select>
+                </div>
+                <div class="property-form__select"> 
+                  <label class="property-form__select--label" for=""> Property Type</label>
+                  <select class="form-select property-form__select--color">
+                    <option value="">Any Tipe</option>
+                  </select>
+                </div>
+                <div class="property-form__select"> 
+                  <label class="property-form__select--label" for="">Purpose</label>
+                  <select class="form-select property-form__select--color">
+                    <option value="">Any Purpose</option>
+                  </select>
+                </div>
+                <div class="property-form__select"> 
+                  <label class="property-form__select--label" for="">Badrooms</label>
+                  <select class="form-select property-form__select--color">
+                    <option value="">+1</option>
+                  </select>
+                </div>
+                <div class="property-form__select"> 
+                  <label class="property-form__select--label" for="">Bathrooms</label>
+                  <select class="form-select property-form__select--color">
+                    <option value="">+1</option>
+                  </select>
+                </div>
+                <label class="form-label property-form__select property-form__select--label" for="amount">Price</label>
+                <div class="property-form__range" id="slider-range"> 
+                  <input class="form-range" type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </div>
+                <div class="btn property-form__line d-grid gap-2 mt-sm"> <a class="btn btn-primary" href="">SEARCH PROPERTIES</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-card section section--grey section--padding">  
+        <div class="container">
+          <div class="section-heading--center">
+            <div class="section-heading__title">
+              <h2 class="section-heading__title-big">New Listing</h2>
+            </div>
+          </div>
+          <div class="btn-special d-flex justify-content-center pb-md"><a class="btn btn-primary--border-green" href="">RENT</a><a class="btn btn-primary--border-green" href="">BUY</a></div>
+          <div class="card-wrapper--grid2 pb-md"> 
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                            <div class="card__icon"> <img src="./img/header/home/home-card-icon-1.png" alt=""><span class="card__icon--ml">2bd</span><img src="./img/header/home/home-card-icon-2.png" alt=""><span class="card__icon--ml">1ba</span><span>756 sqft		</span></div>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                            <div class="card__icon"> <img src="./img/header/home/home-card-icon-1.png" alt=""><span class="card__icon--ml">2bd</span><img src="./img/header/home/home-card-icon-2.png" alt=""><span class="card__icon--ml">1ba</span><span>756 sqft		</span></div>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                            <div class="card__icon"> <img src="./img/header/home/home-card-icon-1.png" alt=""><span class="card__icon--ml">2bd</span><img src="./img/header/home/home-card-icon-2.png" alt=""><span class="card__icon--ml">1ba</span><span>756 sqft		</span></div>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                            <div class="card__icon"> <img src="./img/header/home/home-card-icon-1.png" alt=""><span class="card__icon--ml">2bd</span><img src="./img/header/home/home-card-icon-2.png" alt=""><span class="card__icon--ml">1ba</span><span>756 sqft		</span></div>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                            <div class="card__icon"> <img src="./img/header/home/home-card-icon-1.png" alt=""><span class="card__icon--ml">2bd</span><img src="./img/header/home/home-card-icon-2.png" alt=""><span class="card__icon--ml">1ba</span><span>756 sqft		</span></div>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                            <div class="card__icon"> <img src="./img/header/home/home-card-icon-1.png" alt=""><span class="card__icon--ml">2bd</span><img src="./img/header/home/home-card-icon-2.png" alt=""><span class="card__icon--ml">1ba</span><span>756 sqft		</span></div>
+                          </div>
+                        </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center"><a class="btn btn-primary" href="">VIEW DETAILS	</a>
+        </div>
+      </section>
+      <section class="section-agencies section--padding"> 
+        <div class="container"> 
+          <div class="section-heading--center">
+            <div class="section-heading__title">
+              <h2 class="section-heading__title-big">New Listing</h2>
+            </div>
+            <div class="section-heading__description">
+              <p class="section-heading__description-text">Aliquam fermentum erat eu nunc dignissim hendrerit. Praesent tellus, orci imperdiet id accumsan in, cursus eu mauris.            </p>
+            </div>
+          </div>
+          <div class="pb-sm"></div>
+          <div class="card-profile__wrapper">
+                        <div class="card-profile">	
+                          <div class="card-profile__img"> <img src="./img/card/card-profile__logo.png" alt=""></div>
+                          <div class="card-profile__body"> 
+                            <h5 class="card-profile__title">Real Estate TX Agency</h5>
+                            <p class="card__description text-center"> Praesent elementum porttitor quam bibendum porttitor.</p>
+                            <div class="d-flex justify-content-center"> <a class="btn btn-primary" href="../../single-agency.html">VIEW PROFILES</a></div>
+                          </div>
+                        </div>
+                        <div class="card-profile">	
+                          <div class="card-profile__img"> <img src="./img/card/card-profile__logo.png" alt=""></div>
+                          <div class="card-profile__body"> 
+                            <h5 class="card-profile__title">Real Estate TX Agency</h5>
+                            <p class="card__description text-center"> Praesent elementum porttitor quam bibendum porttitor.</p>
+                            <div class="d-flex justify-content-center"> <a class="btn btn-primary" href="../../single-agency.html">VIEW PROFILES</a></div>
+                          </div>
+                        </div>
+                        <div class="card-profile">	
+                          <div class="card-profile__img"> <img src="./img/card/card-profile__logo.png" alt=""></div>
+                          <div class="card-profile__body"> 
+                            <h5 class="card-profile__title">Real Estate TX Agency</h5>
+                            <p class="card__description text-center"> Praesent elementum porttitor quam bibendum porttitor.</p>
+                            <div class="d-flex justify-content-center"> <a class="btn btn-primary" href="../../single-agency.html">VIEW PROFILES</a></div>
+                          </div>
+                        </div>
+                        <div class="card-profile">	
+                          <div class="card-profile__img"> <img src="./img/card/card-profile__logo.png" alt=""></div>
+                          <div class="card-profile__body"> 
+                            <h5 class="card-profile__title">Real Estate TX Agency</h5>
+                            <p class="card__description text-center"> Praesent elementum porttitor quam bibendum porttitor.</p>
+                            <div class="d-flex justify-content-center"> <a class="btn btn-primary" href="../../single-agency.html">VIEW PROFILES</a></div>
+                          </div>
+                        </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--dark section--padding"> 
+        <div class="container"> 
+          <div class="swiper main-swiper JS-main-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide main-swiper-slide">
+                <div class="comment"><img class="comment-icon" src="img/comment/comment-quotes.png" alt="">
+                  <p class="comment-text">
+                    Praesent scelerisque sollicitudin eros, sollicitudin urna hendrerit.
+                    Sed rutrum sem odio, et egestas elit ullamcorper id. 
+                    In consectetur cursus leo id suscipit.
+                  </p><span class="commemt-name">Michael Hopkins</span>
+                </div>
+              </div>
+              <div class="swiper-slide main-swiper-slide"></div>
+              <div class="swiper-slide main-swiper-slide">
+                <div class="comment"><img class="comment-icon" src="img/comment/comment-quotes.png" alt="">
+                  <p class="comment-text">
+                    Praesent scelerisque sollicitudin eros, sollicitudin urna hendrerit.
+                    Sed rutrum sem odio, et egestas elit ullamcorper id. 
+                    In consectetur cursus leo id suscipit.
+                  </p><span class="commemt-name">Michael Hopkins</span>
+                </div>
+              </div>
+            </div>
+            <div class="pag">
+              <div class="swiper-pagination"> </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section-card section section--grey section--padding">  
+        <div class="container">
+          <div class="section-heading--center">
+            <div class="section-heading__title">
+              <h2 class="section-heading__title-big">New Listing</h2>
+            </div>
+          </div>
+          <div class="card-wrapper--grid2 pb-md"> 
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                          </div>
+                        </div>
+                        <div class="card">	
+                          <div class="card__img"> <img src="https://afisha.nyc/wp-content/uploads/2017/09/Bez-nazvaniya.jpg" alt=""></div>
+                          <div class="card__body"> 
+                            <h5 class="card__title">Central Park, Manhattan, NY </h5>
+                            <div class="card__subtitle my-color-primary">$5,630,000</div>
+                            <p class="card__description">Nullam vestibulum leo et ante facilisis, vel feugiat mauris accumsan.</p>
+                          </div>
+                        </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-aboutUs section--padding"> 
+        <div class="container">
+          <div class="d-sm-flex justify-content-lg-between">
+            <div class="flex-column">
+              <div class="section-heading__title">
+                <h2 class="section-heading__title-big">New Listing</h2>
+              </div>
+              <div class="section-heading__description">
+                <p class="section-heading__description-text">Aliquam fermentum erat eu nunc dignissim hendrerit. Praesent tellus, orci imperdiet id accumsan in, cursus eu mauris.            </p>
+              </div>
+              <div class="btn--max"><a class="btn btn-primary" href="">VIEW DETAILS	</a>
+              </div>
+            </div>
+            <div class="video__gap">
+              <div class="video">
+                <iframe src="https://www.youtube.com/embed/OjVK055CTNI" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact my-bgc-primary">
+        <div class="container">
+          <div class="contact-container my-bgc-primary"> 
+            <p class="contact-text">If you have any questions – please contact us via the contact form.</p>
+            <div class="btn-primary--border"><a class="btn btn-primary" href="">VIEW DETAILS	</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="footer__wrapper">
+          <div class="footer-info">
+            <h2 class="footer-info__title">Real Estate </h2>
+            <div class="footer-info__description">
+              <p class="footer-info__description-text">
+                Nam a dui erat. Sed bibendum augue et porta 
+                consequat. Morbi id mattis sem. Phasellus quis 
+                magna ipsum. Donec malesuada nisi felis, vel 
+                vestibulum nisl volutpat faucibus.																
+              </p>
+            </div>
+            <ul class="footer-network"> 
+              <li> <a class="footer-network__link" href=""><img src="./img/header/footer/icon-facebook.png" alt="facebook"></a></li>
+              <li> <a class="footer-network__link" href=""><img src="./img/header/footer/icon-twitter.png" alt="twitter"></a></li>
+              <li> <a class="footer-network__link" href=""><img src="./img/header/footer/icon-google-plus.png" alt="google-plus"></a></li>
+              <li> <a class="footer-network__link" href=""><img src="./img/header/footer/icon-twitter.png" alt="behance"></a></li>
+              <li> <a class="footer-network__link" href=""><img src="./img/header/footer/icon-pinterest.png" alt="pinterest"></a></li>
+              <li> <a class="footer-network__link" href=""><img src="./img/header/footer/icon-instagram.png" alt="instagram"></a></li>
+            </ul>
+          </div>
+          <div class="footer-menu"> 
+            <div class="footer-item">
+              <h4 class="footer-item__title">Quick Links </h4>
+              <ul class="footer-list"> 
+                <li> <a class="footer-list__link" href="">Home	</a></li>
+                <li> <a class="footer-list__link" href="">Agencias	</a></li>
+                <li> <a class="footer-list__link" href="">Properties	</a></li>
+              </ul>
+            </div>
+            <div class="footer-item footer-item--news">
+              <h4 class="footer-item__title none">Quick Links </h4>
+              <ul class="footer-list"> 
+                <li> <a class="footer-list__link" href="">News	</a></li>
+                <li> <a class="footer-list__link" href="">Contacts us	</a></li>
+              </ul>
+            </div>
+            <div class="footer-item">
+              <h4 class="footer-item__title">Contacts us </h4>
+              <ul class="footer-list"> 
+                <li> <a class="footer-list__link footer-list__link--mail" href="mailto:hello@realestate.com">hello@realestate.com</a></li>
+                <li><a class="footer-list__link" href="tel:+44 987 065 908"> +44 987 065 908</a></li>
+                <li> <a class="footer-list__link" href="tel:+44 987 062 909">+44 987 062 909</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright"> 
+        <p>© 2018 . All rights reserved.	</p>
+      </div>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"> </script>
+  <script src="./js/main.js"> </script>
+</html>

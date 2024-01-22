@@ -1,0 +1,79 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        }
+     @media (max-width: 425px) {
+        grid-template-columns: repeat(1, 1fr);
+        }        
+    &-skill {
+        &__text {
+            font-size: 12px;
+            font-family: "Montserrat";
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 2.5;
+        }
+    }
+    &-screen {
+        width: 1200px;
+        height: 500px;
+        width: 100%;
+        background-color: #696969;
+        @media (max-width: 1024px) {
+            width: 840px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+        width: 700px;
+        height: 400px;
+        }
+        @media (max-width: 425px) {
+            width: 360px;
+            height: 200px;
+        }
+        @media (max-width: 320px) {
+            width: 300px;
+            height: 200px;
+        }
+    }
+    &-item {
+        &__icon {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+          &--max-w {
+            height: 42px;
+          }
+        }
+        &__title {
+            font-size: 12px;
+            font-family: "Montserrat";
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 2.5;
+            text-align: center;
+            margin-bottom: 20px;
+        } 
+        &__description {
+            font-size: 16px;
+            font-family: "NunitoSans";
+            color: rgb(255, 255, 255);
+            line-height: 1.5;
+            text-align: center;         
+        }
+    }
+}
+.progress {
+    height: 3px !important; 
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+      background-color:  var(--color-primary) !important;  
+      height: 3px !important;     
+}

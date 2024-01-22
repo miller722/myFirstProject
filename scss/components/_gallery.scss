@@ -1,0 +1,23 @@
+.gallery {
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+    }
+    &__item {
+        max-height: 320px;
+        background-color: grey;
+        border-radius: 5px;
+        object-fit: cover;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

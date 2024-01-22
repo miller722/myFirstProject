@@ -1,0 +1,102 @@
+doctype html
+html(lang="en")
+	include ../includes/head.pug
+	body 
+		//- header
+		include ../components/header.pug
+			title Home
+		//- main
+		main 
+			section.section-home
+				.container-md 
+					.row 
+						.col-md-6
+							include ../components/map.pug
+						.col-md-6
+							.property-form 
+								.property-form__select 
+										label.property-form__select--label(for="") City
+										select.form-select.property-form__select--color
+												option.property-form__select--option(value="") New York
+								.property-form__select 
+										label.property-form__select--label(for="")  Property Type
+										select.form-select.property-form__select--color
+												option(value="") Any Tipe
+								.property-form__select 
+										label.property-form__select--label(for="") Purpose
+										select.form-select.property-form__select--color
+												option(value="") Any Purpose
+								.property-form__select 
+										label.property-form__select--label(for="") Badrooms
+										select.form-select.property-form__select--color
+												option(value="") +1
+								.property-form__select 
+										label.property-form__select--label(for="") Bathrooms
+										select.form-select.property-form__select--color
+												option(value="") +1
+								label.form-label.property-form__select.property-form__select--label(for="amount") Price
+								.property-form__range(id="slider-range") 
+										input.form-range(type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;")
+								.btn.property-form__line.d-grid.gap-2.mt-sm 
+										a.btn.btn-primary(href="") SEARCH PROPERTIES
+			section.section-card.section.section--grey.section--padding   
+				.container
+					.section-heading--center
+						include ../components/heading.pug
+					.btn-special.d-flex.justify-content-center.pb-md
+						a.btn.btn-primary--border-green(href="") RENT
+						a.btn.btn-primary--border-green(href="") BUY
+					.card-wrapper--grid2.pb-md 
+						include ../components/card.pug 
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+				.d-flex.justify-content-center
+					include ../components/button.pug
+					+buttonElement
+			section.section-agencies.section--padding  
+				.container 
+					.section-heading--center
+						include ../components/heading.pug
+						include ../components/description.pug
+					.pb-sm
+					.card-profile__wrapper
+						include ../components/card.pug
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+			section.section--dark.section--padding  
+				.container 
+					.swiper.main-swiper.JS-main-swiper
+						.swiper-wrapper
+							.swiper-slide.main-swiper-slide
+								include ../components/comment.pug
+							.swiper-slide.main-swiper-slide
+							.swiper-slide.main-swiper-slide
+								include ../components/comment.pug
+						.pag
+							.swiper-pagination 
+						.swiper-button-prev
+						.swiper-button-next
+			section.section-card.section.section--grey.section--padding   
+				.container
+					.section-heading--center
+						include ../components/heading.pug
+					.card-wrapper--grid2.pb-md 
+						include ../components/card.pug
+						+cardCompressed
+						+cardCompressed
+						+cardCompressed
+			section.section-aboutUs.section--padding  
+				.container
+					include ../components/video.pug
+			section.section-contact.my-bgc-primary
+				.container
+					include ../components/contact-us.pug
+		//- footer
+		include ../components/footer.pug
+	include ../includes/foot.pug

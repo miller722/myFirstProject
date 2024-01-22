@@ -1,0 +1,122 @@
+doctype html
+html(lang="en")
+		include ../includes/head.pug
+			title About
+		body 
+			//- header
+			include ../components/header.pug
+			//- main
+			main 
+				section.section-breadcrumb
+					.container 
+						include ../components/breadcrumb.pug
+						+navHomeAboutUs
+				section.section--pb  
+					.container 
+						.about-screen
+							iframe.property-map__frame(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194144778!2d-74.03927083569786!3d40.75904032948303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2z0JzQsNC90YXRjdGC0YLQtdC9LCDQndGM0Y4t0JnQvtGA0LosINCh0KjQkA!5e0!3m2!1sru!2sua!4v1638813276656!5m2!1sru!2sua" width="1140" height="450" style="border:0;" allowfullscreen="" loading="lazy")
+				section.section-aboutUs.section--padding  
+					.container
+						include ../components/video.pug
+				section.section--dark.section--padding 
+					.container 
+						.about 
+							.about-item 
+								.about-item__icon 
+									img.about-item__icon--max-w(src="../img/about-us/about-us-1.png", alt="") 
+								h3.about-item__title creative Ideas
+								p.about-item__description.
+									Be set fourth land god darkness 
+									make it wherein own
+							.about-item 
+								.about-item__icon 
+									img.about-item__icon--max-w(src="../img/about-us/about-us-2.png", alt="") 
+								h3.about-item__title realy clean code
+								p.about-item__description.
+									Be set fourth land god darkness 
+									make it wherein own
+							.about-item 
+								.about-item__icon 
+									img.about-item__icon--max-w(src="../img/about-us/about-us-3.png", alt="") 
+								h3.about-item__title support 24/a7
+								p.about-item__description.
+									Be set fourth land god darkness 
+									make it wherein own
+							.about-item 
+								.about-item__icon 
+									img.about-item__icon--max-w(src="../img/about-us/about-us-4.png", alt="") 
+								h3.about-item__title talanted team
+								p.about-item__description.
+									Be set fourth land god darkness 
+									make it wherein own	
+				section.section--padding 
+					.container 
+						.section-heading--center
+							include ../components/heading.pug
+							include ../components/description.pug
+						.gallery-wrapper 
+							.gallery__item 
+								img(src="img/about-us/gallery-1.jpg", alt="")
+							.gallery__item 
+								img(src="img/about-us/gallery-2.jpg", alt="") 
+							.gallery__item 
+								img(src="img/about-us/gallery-3.jpg", alt="") 
+							.gallery__item 
+								img(src="img/about-us/gallery-4.jpg", alt="")
+							.gallery__item 
+								img(src="img/about-us/gallery-5.jpg", alt="") 
+							.gallery__item 
+								img(src="img/about-us/gallery-6.jpg", alt="") 
+				section.section--grey.section--padding 
+					.container 
+							.flex-wrapper 
+								.col-6 
+									include ../components/heading.pug
+									include ../components/description.pug
+								.offset-1.col-5
+									.about-skill 
+										span.about-skill__text UI/UX Design    75%
+										.progress 
+											.progress-bar(role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100")
+										span.about-skill__text web development    90%
+										.progress 
+											.progress-bar(role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100")
+										span.about-skill__text marketing    65%
+										.progress 
+											.progress-bar(role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100")
+										span.about-skill__text mobile design    80%
+										.progress 
+											.progress-bar(role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100")
+
+							
+				section.section--dark.section--padding  
+					.container 
+							.swiper.main-swiper.JS-main-swiper
+								.swiper-wrapper
+									.swiper-slide.main-swiper-slide
+										include ../components/comment.pug
+									.swiper-slide.main-swiper-slide
+									.swiper-slide.main-swiper-slide
+										include ../components/comment.pug
+								.pag
+									.swiper-pagination 
+								.swiper-button-prev
+								.swiper-button-next
+				section.section-card.section--padding  
+					.container
+						.section-heading--center
+							include ../components/heading.pug
+						.card-wrapper--grid2.pb-md 
+							include ../components/card.pug
+							+cardCompressed
+							+cardCompressed
+							+cardCompressed
+						.d-flex.justify-content-center
+							include ../components/button.pug
+							+buttonElement
+				section.section-contact.my-bgc-primary
+					.container
+						include ../components/contact-us.pug
+			//- footer
+			include ../components/footer.pug
+		include ../includes/foot.pug

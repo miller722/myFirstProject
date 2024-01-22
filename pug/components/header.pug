@@ -1,0 +1,40 @@
+header.header
+	nav.navbar.navbar-expand-lg.header-bg
+		.container 
+				a.navbar-brand(href="#")
+					img(src="./img/header/LOGO.png", alt="logo")
+				button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+					span.navbar-toggler-icon
+				.collapse.navbar-collapse(id="navbarNav")
+					ul.nav.navbar-nav.navbar-right
+						li.nav-item 
+							a.nav-link.home(aria-current="page" href="../../index.html") HOME
+		
+						li.nav-item.dropdown
+							a.nav-link.properties(href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false") PROPERTIES
+							ul.dropdown-menu(aria-labelledby="dropdownMenuLink")
+								li 
+									.line_1
+								li
+									a.dropdown-item(href="../../property-card.html") Properties Map
+								li
+									a.dropdown-item(href="../../home-3.html") Properties Map
+								li
+									hr.dropdown-divider
+								li
+									a.dropdown-item(href="../../home-4.html") Single Property
+						li.nav-item 
+							a.nav-link.agencies(href="../../agencies.html") AGENCIES
+						li.nav-item 
+							a.nav-link.about(href="../../about-us.html") ABOUT
+						li.nav-item 
+							a.nav-link.news(href="../../news.html") NEWS
+						li.nav-item 
+							a.nav-link.contact(href="../../contact.html") CONTACT US			
+					.auth 
+						.auth__icon 
+							img(src="./img/header/icon-login.png", alt="icon")
+						.auth__login 
+							a(href="http://")  LOGIN 
+						.auth__register 
+							a(href="http://")  REGISTER

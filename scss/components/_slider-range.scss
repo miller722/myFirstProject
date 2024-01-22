@@ -1,0 +1,43 @@
+.ui-widget-header {
+    background: #ffa656 !important;
+    color: #333333;
+    font-weight: bold;
+}
+.ui-widget.ui-widget-content {
+    border: none !important;
+    border-radius: 25px !important;
+}
+.form-range {
+    font-size: 16px;
+    font-family: "NunitoSans";
+    color: rgb(78, 78, 78) !important;     
+    margin-top: 20px !important; 
+}
+.ui-widget-content {
+    background-color: #dedede !important;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 50px !important;
+    
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.ui-slider-horizontal {
+    height: 6px !important;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -0.4em !important;
+    margin-left: -.6em;
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+    border: 1px solid #00bd74 !important;
+    background: #00bd74 !important;
+}

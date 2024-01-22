@@ -1,0 +1,117 @@
+doctype html
+html(lang="en")
+	include ../includes/head.pug
+		title Home
+	body 
+		//- header
+		include ../components/header.pug
+		//- main
+		main 
+			section.section-home
+				.container 
+						.swiper.main-swiper.JS-main-swiper
+							.swiper-wrapper
+								.swiper-slide.main-swiper-slide
+									.home
+										.home-blurb
+											.home-blurb__sale.text-left.m-auto.mb-4
+												span SALE 
+											.home-blurb__title 
+												h1.home-blurb__title-text.text-center  372 Central Park W #17N,  New York
+											.home-blurb__description 
+												p.home-blurb__description-text.text-center.
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean 
+													necarcu eget nulla bibendum finibus. Class aptent taciti sociosqu ad litora 
+													torquent per conubia nostra, per inceptos himenaeos.
+									.d-flex.justify-content-center
+										include ../components/button.pug
+										+buttonElement
+								.swiper-slide.main-swiper-slide
+									.home
+										.home-blurb
+											.home-blurb__sale.text-left.m-auto.mb-4
+												span SALE 
+											.home-blurb__title 
+												h1.home-blurb__title-text.text-center  372 Central Park W #17N,  New York
+											.home-blurb__description 
+												p.home-blurb__description-text.text-center.
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean 
+													necarcu eget nulla bibendum finibus. Class aptent taciti sociosqu ad litora 
+													torquent per conubia nostra, per inceptos himenaeos.
+									.d-flex.justify-content-center
+										include ../components/button.pug
+										+buttonElement
+							.pag
+								.swiper-pagination 
+							.swiper-button-prev
+							.swiper-button-next
+			section.section-property.section--padding 
+				.container-sm 
+					.section-heading--center
+						include ../components/heading.pug
+						include ../components/description.pug
+					.pb-sm
+					.property 
+						include ../components/map.pug
+						include ../components/form.pug
+			section.section-card.section.section--grey.section--padding   
+				.container
+					.section-heading--center
+						include ../components/heading.pug
+					.btn-special.d-flex.justify-content-center.pb-md
+						a.btn.btn-primary--border-green(href="") RENT
+						a.btn.btn-primary--border-green(href="") BUY
+					.card-wrapper--grid2.pb-md 
+						include ../components/card.pug 
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+				.d-flex.justify-content-center
+					include ../components/button.pug
+					+buttonElement
+			section.section-agencies.section--padding  
+				.container 
+					.section-heading--center
+						include ../components/heading.pug
+						include ../components/description.pug
+					.pb-sm
+					.card-profile__wrapper
+						include ../components/card.pug
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+			section.section--dark.section--padding  
+				.container 
+					.swiper.main-swiper.JS-main-swiper
+						.swiper-wrapper
+							.swiper-slide.main-swiper-slide
+								include ../components/comment.pug
+							.swiper-slide.main-swiper-slide
+							.swiper-slide.main-swiper-slide
+								include ../components/comment.pug
+						.pag
+							.swiper-pagination 
+						.swiper-button-prev
+						.swiper-button-next
+			section.section-card.section.section--grey.section--padding   
+				.container
+					.section-heading--center
+						include ../components/heading.pug
+					.card-wrapper--grid2.pb-md 
+						include ../components/card.pug
+						+cardCompressed
+						+cardCompressed
+						+cardCompressed
+			section.section-aboutUs.section--padding  
+				.container
+					include ../components/video.pug
+			section.section-contact.my-bgc-primary
+				.container
+					include ../components/contact-us.pug
+		//- footer
+		include ../components/footer.pug
+	include ../includes/foot.pug

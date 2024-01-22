@@ -1,0 +1,26 @@
+.property-form.ml-sm  
+    .property-form__select 
+        label.property-form__select--label(for="") City
+        select.form-select.property-form__select--color
+            option.property-form__select--option(value="") New York
+    .property-form__select 
+        label.property-form__select--label(for="")  Property Type
+        select.form-select.property-form__select--color
+            option(value="") Any Tipe
+    .property-form__select 
+        label.property-form__select--label(for="") Purpose
+        select.form-select.property-form__select--color
+            option(value="") Any Purpose
+    .property-form__select 
+        label.property-form__select--label(for="") Badrooms
+        select.form-select.property-form__select--color
+            option(value="") +1
+    .property-form__select 
+        label.property-form__select--label(for="") Bathrooms
+        select.form-select.property-form__select--color
+            option(value="") +1
+    label.form-label.property-form__select.property-form__select--label(for="amount") Price
+    .property-form__range(id="slider-range") 
+        input.form-range(type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;")
+    .btn.property-form__line.d-grid.gap-2.mt-sm 
+        a.btn.btn-primary(href="") SEARCH PROPERTIES

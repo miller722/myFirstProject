@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+		include ../includes/head.pug
+			title Contact
+		body 
+			//- header
+			include ../components/header.pug
+			//- main
+			main 
+				section.section-breadcrumb
+						.container 
+							include ../components/breadcrumb.pug
+							+navHomeContactUs
+				section.section--pb 
+					.container 
+						.about-screen
+							iframe.property-map__frame(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194144778!2d-74.03927083569786!3d40.75904032948303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2z0JzQsNC90YXRjdGC0YLQtdC9LCDQndGM0Y4t0JnQvtGA0LosINCh0KjQkA!5e0!3m2!1sru!2sua!4v1638813276656!5m2!1sru!2sua" width="1140" height="450" style="border:0;" allowfullscreen="" loading="lazy")
+				section.section-contact
+					.container 
+						.contact-wrapper 
+							.col-md-4
+								.contact-info 
+									h3.contact-info__title Contact Info: 
+									p.contact-info__description.
+										To give give beginning divide, cattle. Give moving 
+										won't, there the abundantly she'd she'd brought air 
+										upon. Light hath subdue. Life days creature upon 
+										first heaven gathering dry.
+
+									.d-flex 
+										p.contact__item.
+											<span	class="contact__item--bold">Address:</span> 10111 Santa Monica Boulevard, LA
+									.d-flex 
+										a.contact__item(href="tel:+44 987 065 908") <span	class="contact__item--bold">Phone:</span> +44 987 065 908
+									.d-flex 
+										a.contact__item(href="mailto:info@realestate.com") <span	class="contact__item--bold">Enail:</span>  info@realestate.com
+									.d-flex 
+										a.contact__item(href="tel:+44 987 062 909") <span	class="contact__item--bold">Fax:</span> +44 987 062 909
+							.offset-1.col-md-7
+								.form.row.g-4 	
+									.col-md-6
+										input(type="text" class="form-control" placeholder="Name*")
+									.col-md-6
+										input(type="email" class="form-control" placeholder="Email*")
+									.col-12
+										input(type="text" class="form-control" placeholder="Title") 
+									.form-floating 
+										textarea(class="form-control" placeholder="Message*" style="height: 170px") 
+									div
+										a.btn--max.btn.btn-primary(href="") SEND MESSAGES
+			//- footer
+			include ../components/footer.pug
+		include ../includes/foot.pug

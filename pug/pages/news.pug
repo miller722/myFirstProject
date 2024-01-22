@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+		include ../includes/head.pug
+			title News
+		body 
+			//- header
+			include ../components/header.pug
+			//- main
+			main 
+				section.section-breadcrumb
+					.container 
+						include ../components/breadcrumb.pug
+						+navHomeNews
+				section.section--grey.section--padding 
+					.container
+						.d-flex.justify-content-center
+							h3.section-heading__title Latest News
+						.d-flex.justify-content-center
+							ul.nav.nav-pills.mb-3(id="pills-tab" role="tablist")
+								li.nav-item(role="presentation")
+									button.nav-link.link--grey.active(id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true") ALL
+								li.nav-item(role="presentation")
+									button.nav-link.link--grey(id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false") INTERIORS
+								li.nav-item(role="presentation")
+									button.nav-link.link--grey(d="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false") AGENCIES
+								li.nav-item(role="presentation")
+									button.nav-link.link--grey(d="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false") OUR TEAM
+						.card-wrapper--grid2.pb-lg
+							include ../components/card.pug
+							+cardCompressed
+							+cardCompressed
+							+cardCompressed
+							+cardCompressed
+							+cardCompressed
+							+cardCompressed
+						.d-flex.justify-content-center
+							include ../components/button.pug
+							+buttonElement
+				section.section-contact.my-bgc-primary
+					.container
+						include ../components/contact-us.pug
+			//- footer
+			include ../components/footer.pug
+		include ../includes/foot.pug

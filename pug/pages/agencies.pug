@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+	include ../includes/head.pug
+		title Agencies
+	body 
+		//- header
+		include ../components/header.pug
+		//- main
+		main 
+			section.section-breadcrumb
+				.container 
+					include ../components/breadcrumb.pug
+					+navHomeAgencies
+			section.section--bottom-sm
+				.container 
+					.property-form--agencies
+						.property-form__select 
+							label.property-form__select--label(for="") City
+							select.form-select.property-form__select--color
+								option.property-form__select--option(value="") New York
+						.property-form__select 
+							label.property-form__select--label(for="") Purpose
+							select.form-select.property-form__select--color
+								option(value="") Any Purpose
+						.property-form__select 
+							label.property-form__select--label(for="")  Keywords
+							input.form-control.property-form__select--color(type="text" id="TextInput" placeholder="Enter keywords...")
+					.section--grey.d-flex.justify-content-center.pb-sm
+						a.btn.btn-primary(href="") SEARCH AGENCIES
+					
+
+			section.section--grey.section--padding 
+				.container 
+					.card-profile__wrapper.pb-md
+						include ../components/card.pug
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+						+cardProfile
+					.d-flex.justify-content-center.pb-md
+						include ../components/button.pug
+						+buttonElement
+			section.section-contact.my-bgc-primary
+				.container
+					include ../components/contact-us.pug
+		//- footer
+		include ../components/footer.pug
+	include ../includes/foot.pug

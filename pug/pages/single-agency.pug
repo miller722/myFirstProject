@@ -1,0 +1,95 @@
+doctype html
+html(lang="en")
+	include ../includes/head.pug
+		title Single Agency
+	body 
+		//- header
+		include ../components/header.pug
+		//- main
+		main 
+			section.section-breadcrumb
+				.container-sm 
+					include ../components/breadcrumb.pug
+					+navHomeAgenciesSingleAgency
+			section.section-single
+				section.section-content
+					.d-sm-flex 	
+						.card-profile__img.single-agency__img
+							img(src="./img/card/card-profile__logo.png", alt="")
+						.single-agency__text
+							h2.section-heading__title-big Real Estate New York <br> Agency
+							p.card__description  Unated States, New York
+					p.section-heading__description.text-justify.pb-md.main-m-0. 
+						Aliquam fermentum erat eu nunc dignissim hendrerit. Praesent tellus, orci imperdiet id set 
+						accumsan in, cursus eu mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Integer dictum lacus nec leo tincidunt, blandit rhoncus elit aliquam. Duis maximus sed velit 
+						sed pellentesque. Phasellus nec dapibus dolor. Ut nec augue quis dolor bibendum mattis 
+						vel eu turpis. Suspendisse molestie augue massa, vitae eleifend ante.
+						<br>
+						<br>
+						Praesent sed elit id ipsum tempor bibendum a ut arcu. Vivamus rutrum leo at nulla luctus 
+						finibus. Donec molestie ipsum ac orci volutpat, nec consectetur urna venenatis. Cras sagittis 
+						enim vel purus volutpat dignissim. Maecenas quis varius tortor.
+					.section-heading__title
+						h2.section-heading__title Listings
+					.card-wrapper--grid2.pb-lg
+						include ../components/card.pug
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+						+cardFull
+				aside.section-sideBar
+					.card 	
+						.card__img 
+							img(src="", alt="")
+						.card__body.card__body--center 
+							h3.card__title-agency  Contact this Agency 
+							p.marginZero Office:  
+								a.contact__item(href="tel:+1-222-333-4444") 1-222-333-4444
+							p.marginZero Mobile: 
+								a.contact__item(href="tel:+1-234-456-7893") 1-234-456-7893
+							p.marginZero Fax: 
+								a.contact__item(href="tel:+1-333-444-555") 1-333-444-555
+							p.marginZero Fax: 
+								a.contact__item(href="mailto:hello@realestate.com") hello@realestate.com
+						ul.footer-network.justify-content-center.mb-4.mt-3
+							li  
+								a.footer-network__socials(href="")
+									img(src="./img/agency/facebook.png", alt="facebook") 
+							li  
+								a.footer-network__socials(href="")
+									img(src="./img/agency/twitter.png", alt="twitter") 
+							li  
+								a.footer-network__socials(href="")
+									img(src="./img/agency/google-plus.png", alt="google-plus") 
+					.property-form.mb-sm
+						.form
+							input.mb-4(type="text" class="form-control" placeholder="Name*")
+							input.mb-4(type="text" class="form-control" placeholder="Email*")
+						.form-floating 
+							textarea(class="form-control" placeholder="Message*" style="height: 120px") 
+						.btn.d-grid.gap-2.mt-sm 
+							a.btn.btn-primary(href="") SEND YOUR MESSAGE
+						
+					.property-form
+						.property-form__select 
+							label.property-form__select--label(for="") City
+							select.form-select.property-form__select--color
+								option.property-form__select--option(value="") New York
+						.property-form__select 
+							label.property-form__select--label(for="") Purpose
+							select.form-select.property-form__select--color
+								option(value="") Any Purpose
+						.property-form__select 
+							label.property-form__select--label(for="")  Keywords
+							input.form-control.property-form__select--color(type="text" id="TextInput" placeholder="Enter keywords...")
+						.btn.d-grid.gap-2.property-form__line.mt-sm 
+							a.btn.btn-primary(href="") SEARCH PROPERTIES
+			section.section-contact.my-bgc-primary
+				.container
+					include ../components/contact-us.pug
+		//- footer
+		include ../components/footer.pug
+	include ../includes/foot.pug
